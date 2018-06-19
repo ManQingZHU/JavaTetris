@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="gameFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" style="-fx-background-color: #49483E;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_JFX.TetrisController">
+   <right>
+      <AnchorPane fx:id="controlFrame" prefHeight="482.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane layoutX="29.0" layoutY="264.0" prefHeight="33.0" prefWidth="194.0">
+               <children>
+                  <Label text="Speed" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Monaco" size="13.0" />
+                     </font></Label>
+                  <Separator prefWidth="10.0" visible="false" />
+                  <JFXSlider fx:id="speedSlider" max="200.0" onMouseReleased="#handleSpeedChange" value="75.0" />
+               </children>
+            </FlowPane>
+            <Label layoutX="61.0" layoutY="114.0" text="Tetris" textFill="#f8f8f8">
+               <font>
+                  <Font name="Monaco" size="38.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="startButton" contentDisplay="RIGHT" layoutX="21.0" layoutY="293.0" onMouseClicked="#switchGameState" text="Start / End " textFill="#f8f8f8" toggleColor="#fafafa" toggleLineColor="#0e9654">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font></JFXToggleButton>
+            <JFXCheckBox fx:id="testCheckBox" alignment="CENTER_RIGHT" checkedColor="#5264ae" layoutX="78.0" layoutY="384.0" text="Test Mode" textFill="#69a0d2">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="countLabel" layoutX="21.0" layoutY="450.0" text="Pieces: " textFill="#f8f8f8">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="scoreLabel" layoutX="130.0" layoutY="450.0" text="Score: " textFill="#f8f8f8">
+               <font>
+                  <Font name="Monaco" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane fx:id="tetrisFrame" prefHeight="482.0" prefWidth="402.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

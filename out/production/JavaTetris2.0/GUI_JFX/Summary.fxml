@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_JFX.summaryController">
+   <children>
+      <JFXButton fx:id="okButton" layoutX="126.0" layoutY="140.0" onMouseClicked="#handleClick" text="OK" textFill="#5264ae">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="timeLabel" layoutX="46.0" layoutY="35.0" text="Time: ">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreLabel" layoutX="46.0" layoutY="110.0" text="Score: ">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="countLabel" layoutX="46.0" layoutY="72.5" text="Count:">
+         <font>
+            <Font name="Monaco" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
